@@ -45,6 +45,38 @@
                 <button type="submit">Submit</button>
             </div>
         </form>
+        <script>
+            function submitTask() {
+                const taskData = {
+                    taskName: document.getElementById('task-name').value,
+                    taskName: document.getElementById('task-description').value,
+                    taskName: document.getElementById('task-priority').value,
+                    taskName: document.getElementById('task-assigner').value,
+                    taskName: document.getElementById('due-date').value,
+                    taskName: document.getElementById('task-tags').value,
+                    
+              // ... collect other task details ...
+            };
+
+            fetch('https://your-external-server-url/submit-task', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(taskData),
+            })
+            .then(response => response.json())
+            .then(data => {
+              // Handle the response from the server (e.g., show a confirmation message)
+              console.log(data);
+            })
+            .catch(error => {
+              // Handle any errors that occur during the POST request
+              console.error(error);
+            });
+          }
+        </script>
+
     </div>
 </body>
 </html>
