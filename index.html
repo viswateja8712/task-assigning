@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="task-form">
+        <h1>Task Details</h1>
+        <form id="task-form" action="success.html">
+            <div class="form-item">
+                <label for="task-name">Task Name:</label>
+                <input type="text" id="task-name" name="taskName" required>
+            </div>
+
+            <div class="form-item">
+                <label for="task-description">Task Description:</label>
+                <textarea id="task-description" name="taskDescription" required></textarea>
+            </div>
+
+            <div class="form-item">
+                <label for="task-priority">Task Priority:</label>
+                <select id="task-priority" name="taskPriority" required>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+
+            <div class="form-item">
+                <label for="task-assigner">Task Assigner:</label>
+                <input type="text" id="task-assigner" name="taskAssigner" required>
+            </div>
+
+            <div class="form-item">
+                <label for="due-date">Due Date:</label>
+                <input type="date" id="due-date" name="dueDate" required>
+            </div>
+
+            <div class="form-item">
+                <label for="task-tags">Task Tags:</label>
+                <input type="text" id="task-tags" name="taskTags" required>
+            </div>
+
+            <div class="form-item">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
